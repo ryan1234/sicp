@@ -1,0 +1,11 @@
+(define (pascal row col)
+	(/ (factorial row) (* (factorial col) (factorial (- row col))))
+)
+
+(define (factorial n)
+	(cond 
+		((= n 0) 1)
+		((= n 1) 1)
+		(else (* n (factorial (- n 1))))
+	)
+)
